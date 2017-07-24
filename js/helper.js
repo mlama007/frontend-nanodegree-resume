@@ -145,7 +145,7 @@ function initializeMap() {
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
     function locationizer(work_obj) {
       var workLocations = [];
-      for (job in work.jobs) {
+      for (var job in work.jobs) {
         var newLocations= work.jobs[job].location;
         workLocations.push(newLocations);
       }
