@@ -35,8 +35,8 @@ work.display = function() {
 		var formattedLocation = HTMLworkLocation.replace("%data%",job.location);
 		var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
 		$(".work-entry:last").append(formattedEmployerTitle+formattedDates+formattedLocation+formattedDescription);
-	})
-}
+	});
+};
 work.display();
 
 //Projects
@@ -74,9 +74,9 @@ projects.display = function () {
 			project.images.forEach(function(image){
 				var formattedprojectImage = HTMLprojectImage.replace("%data%",image);
 				$(".project-entry:last").append(formattedprojectImage);
-			})
+			});
 		}		
-	})
+	});
 };
 projects.display();
 
@@ -122,7 +122,7 @@ bio.display = function() {
 	bio.skills.forEach(function(skill){
 		var formattedskills = HTMLskills.replace("%data%",skill);
 		$("#skills").append(formattedskills);
-	})
+	});
 	var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
 	var formattedTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
@@ -234,7 +234,7 @@ education.display = function() {
 		var formattedLocation = HTMLschoolLocation.replace("%data%",school.location);
 		var formattedMajor = HTMLschoolMajor.replace("%data%",school.majors);
 		$(".education-entry:last").append(formattedName + formattedDegree,formattedDates,formattedLocation,formattedMajor);
-	})
+	});
 	
 	$(".education-entry:last").append(HTMLonlineClasses);
 	education.onlineCourses.forEach(function(online){
@@ -243,7 +243,7 @@ education.display = function() {
 		var formattedOnlineURL = HTMLonlineURL.replace("%data%",online.url);
 		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",online.title);
 		$(".education-entry:last").append(formattedOnlineSchool + formattedOnlineDates,formattedOnlineTitle);
-	})
+	});
 };
 education.display();
 
