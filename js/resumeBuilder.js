@@ -85,8 +85,8 @@ var bio = {
     "name": "Maria Lamardo",
     "role": "Web Developer",
     "contacts": {
-        "mobile": "9545882021",
-        "email": "marialamardo@outlook.com",
+        "mobile": "1111",
+        "email": "@@@",
         //"twitter": "@mlama007",
         "github": "https://github.com/mlama007",
         //"blog": "https://www.mymili.com/index.html",
@@ -129,10 +129,7 @@ bio.display = function() {
 	var formattedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
 	var formattedBlog = HTMLblog.replace("%data%",bio.contacts.blog);
 	var formattedLocation = HTMLlocation.replace("%data%",bio.contacts.location);
-	$("#topContacts, #footerContacts").append(formattedMobile);
-	$("#topContacts, #footerContacts").append(formattedEmail);	
-	$("#topContacts, #footerContacts").append(formattedGithub);	
-	$("#topContacts, #footerContacts").append(formattedLocation);
+	$("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
 	//$("#footerContacts").append(formattedBlog);
 	//$("#footerContacts").append(formattedTwitter);
 };
@@ -146,7 +143,7 @@ var education = {
 		"degree": "Cum Laude with Bachelors of Arts and Sciences in Psychology and a Minor in Business",
 		"dates": "2009-2013",
 		"location": "Miami, Florida",
-		"majors": "Bachelors of Arts and Sciences in Psychology",
+		"majors": ["Bachelors of Arts and Sciences in Psychology"],
 		"minor": "Business"
 	}
 	],
